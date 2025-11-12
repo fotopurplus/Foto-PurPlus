@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie - Foto-PurPlus</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: url('fotobild.jpg') center/cover no-repeat;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  nav a:hover { color: #ccc; }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 1000px;
+    text-align: center;
+    width: 100%;
+  }
+  .card h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+  }
+
+  footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
+  }
+  footer a { color: #fff; text-decoration: underline; }
+
+  @media(max-width:600px){
+    .card { padding: 24px; }
+    .card h1 { font-size: 24px; }
+    .gallery img { height: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Start</a>
+  <a href="gallerie.html">Galerie</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="impressum.html">Impressum</a>
+</nav>
+
+<div class="hero">
+  <div class="card">
+    <h1>Galerie</h1>
+    <div class="gallery">
+      <!-- Platz für 20 Bilder -->
+      <img src="bilder/bild1.jpg" alt="Bild 1">
+      <img src="bilder/bild2.jpg" alt="Bild 2">
+      <img src="bilder/bild3.jpg" alt="Bild 3">
+      <img src="bilder/bild4.jpg" alt="Bild 4">
+      <img src="bilder/bild5.jpg" alt="Bild 5">
+      <img src="bilder/bild6.jpg" alt="Bild 6">
+      <img src="bilder/bild7.jpg" alt="Bild 7">
+      <img src="bilder/bild8.jpg" alt="Bild 8">
+      <img src="bilder/bild9.jpg" alt="Bild 9">
+      <img src="bilder/bild10.jpg" alt="Bild 10">
+      <img src="bilder/bild11.jpg" alt="Bild 11">
+      <img src="bilder/bild12.jpg" alt="Bild 12">
+      <img src="bilder/bild13.jpg" alt="Bild 13">
+      <img src="bilder/bild14.jpg" alt="Bild 14">
+      <img src="bilder/bild15.jpg" alt="Bild 15">
+      <img src="bilder/bild16.jpg" alt="Bild 16">
+      <img src="bilder/bild17.jpg" alt="Bild 17">
+      <img src="bilder/bild18.jpg" alt="Bild 18">
+      <img src="bilder/bild19.jpg" alt="Bild 19">
+      <img src="bilder/bild20.jpg" alt="Bild 20">
+    </div>
+  </div>
+</div>
+
+<footer>
+  Standort: Polen | Support: <a href="mailto:photo.purplus.help@gmail.com">photo.purplus.help@gmail.com</a>
+</footer>
+
+</body>
+</html>
