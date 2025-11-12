@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum - Foto-PurPlus</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: url('fotobild.jpg') center/cover no-repeat;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  nav a:hover { color: #ccc; }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    text-align: center;
+  }
+  .card h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eee;
+  }
+
+  footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
+  }
+  footer a { color: #fff; text-decoration: underline; }
+
+  @media(max-width:600px){
+    .card { padding: 24px; }
+    .card h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Start</a>
+  <a href="gallerie.html">Galerie</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="impressum.html">Impressum</a>
+</nav>
+
+<div class="hero">
+  <div class="card">
+    <h1>Impressum</h1>
+    <p>
+      Justin Frerichs<br>
+      Bremerhavenerstraße 15<br>
+      26954 Nordenham<br>
+      Email: <a href="mailto:justinfrerichs.de@gmail.com">justinfrerichs.de@gmail.com</a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  Standort: Polen | Support: <a href="mailto:photo.purplus.help@gmail.com">photo.purplus.help@gmail.com</a>
+</footer>
+
+</body>
+</html>
